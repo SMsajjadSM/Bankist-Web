@@ -7,7 +7,11 @@ const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
-
+const btnscroll = document.querySelector('.btn--scroll-to');
+const sectionscroll = document.querySelector('#section--1');
+btnscroll.addEventListener('click', () => {
+  sectionscroll.scrollIntoView({ behavior: 'smooth' });
+});
 const openModal = function (e) {
   e.preventDefault();
   modal.classList.remove('hidden');
