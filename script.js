@@ -9,6 +9,7 @@ const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
 const btnscroll = document.querySelector('.btn--scroll-to');
 const sectionscroll = document.querySelector('#section--1');
+const nav = document.querySelector('.nav');
 btnscroll.addEventListener('click', () => {
   sectionscroll.scrollIntoView({ behavior: 'smooth' });
 });
@@ -57,3 +58,19 @@ tabs.forEach(t =>
       .classList.add('operations__content--active');
   })
 );
+const handleHover = function (e) {
+  if (e.target.classList.contains('nav__link')) {
+    const link = e.target;
+    const sibling = link.closest('.nav').querySelectorAll('.nav__link');
+    const logo = link.closest('.nav').querySelector('img');
+    sibling.forEach(s => {
+      if (s !== link) {
+        s.style.opacity = this;
+      } else {
+        logo.style.opacity = this;
+      }
+    });
+  }
+};
+nav.addEventListener('mouseover', handleHover.bind(0.5));
+nav.addEventListener('mouseout', handleHover.bind(1));
