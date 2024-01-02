@@ -5,9 +5,9 @@
 
 [Demo of Bankist-Web](https://smsajjadsm.github.io/Bankist-Web/)
 ===
-![plot](./IMG/1.png)
+![plot](./img/1.png)
 
-![plot](./IMG/2.png)
+![plot](./img/2.png)
 
 
 ## Installation
